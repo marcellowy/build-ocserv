@@ -1,15 +1,39 @@
-# docker build
+# Docker Build
+```
+sudo docker build --rm -t ocserv:latest .
+```
 
-sudo docker build -t ocserv:latest .
-
-# docker run
+# Docker Run
+```
+sudo docker run --privileged -itd ocserv:latest
+```
 
 # ocserv.conf
-
-Modify
-
+Your cert file:
 ```
-server-cert = /etc/ocserv/certificate/
+sudo docker run --privileged -v /path/your/ocserv:/etc/ocserv -itd ocserv:latest
 
-server-key = /etc/ocserv/certificate/
+- /etc/ocserv
+	- cert
+		ca-cert.pem
+		ca-key.pem
+		server-cert.pem
+		server-key.pem
+	- group
+		defualt
+	account
+	dh.pem
+	ocserv.conf
+```
+
+# Account
+```
+// add count
+ocpasswd -c /etc/ocserv/ocpasswd -g [group] [username]
+// Lock
+ocpasswd -c /etc/ocserv/ocpasswd -l [group] [username]
+// Unlock
+ocpasswd -c /etc/ocserv/ocpasswd -u [group] [username]
+// Delete
+ocpasswd -c /etc/ocserv/ocpasswd -d [group] [username]
 ```
