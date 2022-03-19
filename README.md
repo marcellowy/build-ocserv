@@ -6,7 +6,7 @@ sudo docker build --rm -t ocserv:latest .
 
 # Docker Run
 ```
-sudo docker run --privileged -itd ocserv:latest
+sudo docker run --privileged -p 30111:443 -itd ocserv:latest
 ```
 
 # ocserv.conf
