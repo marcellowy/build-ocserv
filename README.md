@@ -1,5 +1,6 @@
 # Docker Build
 ```
+git clone https://github.com/marcellowy/docker-ocserv.git
 sudo docker build --rm -t ocserv:latest .
 ```
 
