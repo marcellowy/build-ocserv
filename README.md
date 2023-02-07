@@ -1,3 +1,4 @@
+# [Deprecated] new project https://github.com/marcellowy/alpine-ocserv
 # Docker Build
 ```
 git clone https://github.com/marcellowy/docker-ocserv.git
